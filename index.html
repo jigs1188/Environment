@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment Love</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Love for the Environment</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="carousel">
+            <button class="prev" onclick="prevSlide()">❮</button>
+            <div class="carousel-images">
+                <!-- Add images for the carousel here -->
+                <img src="photos/day1.jpg" class="carousel-item" >
+                <img src="photos/day2.jpg" class="carousel-item">
+                <img src="photos/day3.jpg" class="carousel-item">
+                <img src="photos/day4.jpg" class="carousel-item">
+                <img src="photos/day5.jpg" class="carousel-item">
+                <img src="photos/day6.jpg" class="carousel-item">
+                <img src="photos/day7.jpg" class="carousel-item">
+                <img src="photos/day8.jpg" class="carousel-item">
+                <img src="photos/day9.jpg" class="carousel-item">
+                <img src="photos/day10.jpg" class="carousel-item">
+                <img src="photos/day11.jpg" class="carousel-item">
+                <img src="photos/day12.jpg" class="carousel-item">
+                <img src="photos/day13.jpg" class="carousel-item">
+                <img src="photos/day14.jpg" class="carousel-item">
+                <img src="photos/day15.jpg" class="carousel-item">
+                <img src="photos/day16.jpg" class="carousel-item">
+                <img src="photos/day17.jpg" class="carousel-item">
+                <img src="photos/day18.jpg" class="carousel-item">
+                <img src="photos/day19.jpg" class="carousel-item">
+                <img src="photos/day20.jpg" class="carousel-item">
+                <img src="photos/day21.jpg" class="carousel-item">
+                <img src="photos/day22.jpg" class="carousel-item">
+                <img src="photos/day23.jpg" class="carousel-item">
+                <img src="photos/day24.jpg" class="carousel-item">
+                <img src="photos/day25.jpg" class="carousel-item">
+                <img src="photos/day26.jpg" class="carousel-item">
+                <img src="photos/day27.jpg" class="carousel-item">
+                <img src="photos/day28.jpg" class="carousel-item">
+                <img src="photos/day29.jpg" class="carousel-item">
+                <!-- Add more images as needed -->
+            </div>
+            <button class="prev" onclick="prevSlide()">❯</button>
+            <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+        <h2>Save Nature, Save Life</h2>
+    </section>
+
+    <section id="photos">
+        <h2>Daily Photos</h2>
+        <!-- Add sections for each day's photos -->
+        <div id="photo-gallery"></div>
+
+    <script>
+        // JavaScript to generate HTML for each day
+        const galleryContainer = document.getElementById('photo-gallery');
+
+        for (let day = 1; day <= 29; day++) {
+            const dayDiv = document.createElement('div');
+            dayDiv.className = 'day';
+            
+            const dayHeading = document.createElement('h3');
+            dayHeading.textContent = `Day ${day}`;
+            
+            const img1 = document.createElement('img');
+            img1.src = `photos/day${day}.jpg`;
+            
+            const img2 = document.createElement('img');
+            img2.src = `photos/day${day}_02.jpg`;
+            
+            dayDiv.appendChild(dayHeading);
+            dayDiv.appendChild(img1);
+            dayDiv.appendChild(img2);
+            galleryContainer.appendChild(dayDiv);
+        }
+    </script>
+    </section>
+<div class="contacts" id="contact">
+    <h2>Contact Us</h2>
+    <p>For more information, please contact us at <a href="112101035@smail.iitpkd.ac.in">Email</a>.</p>
+
+</div>
+    <footer>
+        <p>Let's save the nature together! 🌳💧</p>
+    </footer>
+</body>
+</html>
